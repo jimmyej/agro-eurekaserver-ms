@@ -1,0 +1,32 @@
+spring:
+  application:
+    name: agro-eurekaserver-ms
+  cloud:
+    config:
+      uri: http://localhost:8888
+  jmx: 
+    enabled: true
+  boot:
+    admin:
+      client:
+        url: http://localhost:9090
+        username: admin
+        password: admin
+
+server:
+  port: 8761
+
+eureka:
+  client:
+    registerWithEureka: false
+    fetchRegistry: false
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka
+  server:
+    waitTimeInMsWhenSyncEmpty: 0
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
