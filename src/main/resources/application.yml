@@ -1,9 +1,6 @@
 spring:
   application:
     name: agro-eurekaserver-ms
-  cloud:
-    config:
-      uri: http://localhost:8888
   jmx: 
     enabled: true
   boot:
