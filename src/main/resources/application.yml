@@ -1,14 +1,19 @@
 spring:
   application:
     name: agro-eurekaserver-ms
-  jmx: 
+  cloud:
+    config:
+      uri: http://localhost:8888
+      username: root
+      password: s3cr3t
+  jmx:
     enabled: true
-  boot:
-    admin:
-      client:
-        url: http://localhost:9090
-        username: admin
-        password: admin
+#  boot:
+#    admin:
+#      client:
+#        url: http://localhost:9090
+#        username: admin
+#        password: admin
 
 server:
   port: 8761
